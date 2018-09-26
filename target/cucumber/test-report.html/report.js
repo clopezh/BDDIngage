@@ -82,21 +82,21 @@ formatter.match({
   "location": "StepDefinitions.scala:15"
 });
 formatter.result({
-  "duration": 145162751,
+  "duration": 105965526,
   "status": "passed"
 });
 formatter.match({
   "location": "StepDefinitions.scala:20"
 });
 formatter.result({
-  "duration": 13822560,
+  "duration": 9516086,
   "status": "passed"
 });
 formatter.match({
-  "location": "StepDefinitions.scala:50"
+  "location": "StepDefinitions.scala:48"
 });
 formatter.result({
-  "duration": 1005258,
+  "duration": 716125,
   "status": "passed"
 });
 formatter.scenario({
@@ -175,21 +175,21 @@ formatter.match({
   "location": "StepDefinitions.scala:15"
 });
 formatter.result({
-  "duration": 78934,
+  "duration": 83054,
   "status": "passed"
 });
 formatter.match({
-  "location": "StepDefinitions.scala:35"
+  "location": "StepDefinitions.scala:34"
 });
 formatter.result({
-  "duration": 567466,
+  "duration": 309021,
   "status": "passed"
 });
 formatter.match({
-  "location": "StepDefinitions.scala:50"
+  "location": "StepDefinitions.scala:48"
 });
 formatter.result({
-  "duration": 224417,
+  "duration": 177366,
   "status": "passed"
 });
 });

@@ -5,6 +5,6 @@ class MyCalculator {
     first + second
   }
   def sub(first: Int, second: Int): Int = {
-    first - second
+      first - second
   }
 }
