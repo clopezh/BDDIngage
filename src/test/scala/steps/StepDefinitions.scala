@@ -52,4 +52,39 @@ class StepDefinitions extends ScalaDsl with EN {
       i += 1
     }
   }
+
+
+  When("""^I multiply the firstNum by itself secondNum times$"""){ (numbers:DataTable) =>
+    val list = numbers.asMaps(classOf[String], classOf[String])
+    var i = 0
+    while ( {
+      i < list.size
+    }) {
+      result.append(calc.power(list.get(i).get("firstNum").toInt, list.get(i).get("secondNum").toInt))
+
+      {
+        i += 1; i - 1
+      }
+    }
+  }
+
+
+  When("""^I divide the firstNum between the secondNum and obtain the residue$"""){ (numbers:DataTable) =>
+    val list = numbers.asMaps(classOf[String], classOf[String])
+    var i = 0
+    while ( {
+      i < list.size
+    }) {
+      result.append(calc.module(list.get(i).get("firstNum").toInt, list.get(i).get("secondNum").toInt))
+
+      {
+        i += 1; i - 1
+      }
+    }
+  }
+
+
+
+
+
 }
