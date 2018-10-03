@@ -24,3 +24,33 @@ Feature: My Calculator
       | 2      |
       | 7      |
 
+  @wip
+  Scenario: Should divide two positive numbers
+    Given my calculator is running
+    When I divide the following numbers
+      | firstNum | secondNum |
+      | 5        | 2         |
+      | 10       | 4         |
+      | 15       | 0         |
+
+    Then result should be equal to
+      | result |
+      | 1      |
+      | 2      |
+      | 500    |
+
+  @wip
+  Scenario: get nth root of number
+    Given my calculator is running
+    When Get the first number's nth_root, n being the second number
+      | firstNum | secondNum |
+      | 4        | 2         |
+      | 27       | 3         |
+      | 125      | 0         |
+    Then result should be equal to
+      | result |
+      | 2      |
+      | 3      |
+      | 500    |
+
+
