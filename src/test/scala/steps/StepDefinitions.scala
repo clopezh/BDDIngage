@@ -45,6 +45,34 @@ class StepDefinitions extends ScalaDsl with EN {
     }
   }
 
+  When("""^I multiplied the following numbers$"""){ (numbers:DataTable) =>
+    val list = numbers.asMaps(classOf[String], classOf[String])
+    var i = 0
+    while ( {
+      i < list.size
+    }) {
+      result.append(calc.multiplication(list.get(i).get("firstNum").toInt, list.get(i).get("secondNum").toInt))
+
+      {
+        i += 1; i - 1
+      }
+    }
+  }
+
+  When("""^I make de logarithm of the following numbers$"""){ (numbers:DataTable) =>
+    val list = numbers.asMaps(classOf[String], classOf[String])
+    var i = 0
+    while ( {
+      i < list.size
+    }) {
+      result.append(calc.log(list.get(i).get("firstNum").toInt))
+
+      {
+        i += 1; i - 1
+      }
+    }
+  }
+
   Then("""^result should be equal to$"""){ (results:DataTable) =>
     var i = 0;
     for (row <- results.asMaps(classOf[String], classOf[String])) {
@@ -52,4 +80,5 @@ class StepDefinitions extends ScalaDsl with EN {
       i += 1
     }
   }
+
 }
