@@ -51,4 +51,3 @@ Feature: My Calculator
       | 1     |
       | 0.6989700043360189     |
       | 0     |
-
