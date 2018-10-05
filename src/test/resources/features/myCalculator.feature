@@ -1,4 +1,4 @@
-Feature: My Calculator
+Feature: My Calculator 
 
   @wip
   Scenario: Should add two positive numbers
