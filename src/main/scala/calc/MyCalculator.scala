@@ -17,6 +17,8 @@ class MyCalculator {
     }
 
   }
+
+  
   def logBase10(first: Double): Double = {
     if (first!=0) {
       log10(first)
