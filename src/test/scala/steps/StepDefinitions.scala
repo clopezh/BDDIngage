@@ -79,7 +79,7 @@ class StepDefinitions extends ScalaDsl with EN {
     while ( {
       i < list.size
     }) {
-      result.append(calc.log(list.get(i).get("firstNum").toDouble))
+      result.append(calc.log(list.get(i).get("firstNum").toDouble, list.get(i).get("secondNum").toDouble, list.get(i).get("thirdNum").toInt))
 
       {
         i += 1; i - 1
@@ -93,7 +93,7 @@ class StepDefinitions extends ScalaDsl with EN {
     while ( {
       i < list.size
     }) {
-      result.append(calc.sqr(list.get(i).get("firstNum").toDouble))
+      result.append(calc.sqr(list.get(i).get("firstNum").toDouble, list.get(i).get("secondNum").toInt))
 
       {
         i += 1; i - 1
@@ -107,7 +107,7 @@ class StepDefinitions extends ScalaDsl with EN {
     while ( {
       i < list.size
     }) {
-      result.append(calc.nrt(list.get(i).get("firstNum").toDouble, list.get(i).get("secondNum").toDouble))
+      result.append(calc.nrt(list.get(i).get("firstNum").toDouble, list.get(i).get("secondNum").toDouble, list.get(i).get("thirdNum").toInt))
 
       {
         i += 1; i - 1

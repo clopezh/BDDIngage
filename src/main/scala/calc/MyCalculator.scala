@@ -13,13 +13,13 @@ class MyCalculator {
   def mul(first: Double, second: Double): Double = {
     first * second
   }
-  def log(number: Double): Double = {
-    BigDecimal(scala.math.log(number)).setScale(4, BigDecimal.RoundingMode.FLOOR).toDouble
+  def log(number: Double, base: Double, decimals: Int): Double = {
+    BigDecimal(scala.math.log10(number) / scala.math.log10(base)).setScale(decimals, BigDecimal.RoundingMode.FLOOR).toDouble
   }
-  def sqr(number: Double): Double = {
-    BigDecimal(scala.math.sqrt(number)).setScale(4, BigDecimal.RoundingMode.FLOOR).toDouble
+  def sqr(number: Double, decimals: Int): Double = {
+    BigDecimal(scala.math.sqrt(number)).setScale(decimals, BigDecimal.RoundingMode.FLOOR).toDouble
   }
-  def nrt(number: Double, index: Double): Double = {
-    BigDecimal(scala.math.pow(number, 1/index)).setScale(4, BigDecimal.RoundingMode.FLOOR).toDouble
+  def nrt(number: Double, index: Double, decimals: Int): Double = {
+    BigDecimal(scala.math.pow(number, 1/index)).setScale(decimals, BigDecimal.RoundingMode.FLOOR).toDouble
   }
 }

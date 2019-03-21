@@ -49,24 +49,24 @@ Feature: My Calculator
       | 20      |
 
   @wip
-  Scenario: Should get the logarithm of a positive number
+  Scenario: Should get any logarithm of a positive number
     Given my calculator is running
     When I get the logarithm of the following numbers
-      | firstNum |
-      | 8        |
-      | 32       |
+      | firstNum | secondNum | thirdNum |
+      | 123      | 5         | 2        |
+      | 32       | 10        | 4        |
     Then result should be equal to
       | result   |
-      | 2.0794   |
-      | 3.4657   |
+      | 2.98     |
+      | 1.5051   |
 
   @wip
   Scenario: Should get the square of a positive number
     Given my calculator is running
     When I get the square of the following numbers
-      | firstNum |
-      | 89       |
-      | 9        |
+      | firstNum | secondNum |
+      | 89       | 4         |
+      | 9        | 0         |
     Then result should be equal to
       | result   |
       | 9.4339   |
@@ -76,9 +76,9 @@ Feature: My Calculator
   Scenario: Should get the n root of a positive number
     Given my calculator is running
     When I get the nth root of the following numbers
-      | firstNum | secondNum |
-      | 243      | 5         |
-      | 546      | 8         |
+      | firstNum | secondNum | thirdNum |
+      | 243      | 5         | 0        |
+      | 546      | 8         | 4        |
     Then result should be equal to
       | result  |
       | 3       |
