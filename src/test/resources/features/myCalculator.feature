@@ -24,3 +24,26 @@ Feature: My Calculator
       | 2      |
       | 7      |
 
+  @wip
+  Scenario: Should multiply two positive numbers
+    Given my calculator is running
+    When I multiply the following numbers
+      | firstNum | secondNum |
+      | 2        | 10        |
+      | 45       | 3         |
+    Then result should be equal to
+      | result |
+      | 20     |
+      | 135    |
+
+  @wip
+  Scenario: Should divide two positive numbers
+    Given my calculator is running
+    When I divide the following numbers
+      | firstNum | secondNum |
+      | 15       | 5         |
+      | 80       | 20        |
+    Then result should be equal to
+      | result |
+      | 3      |
+      | 4      |
