@@ -13,4 +13,13 @@ class MyCalculator {
   def div(first: Int, second: Int): Float = {
     first / second
   }
+  def pow(base: Double, exponent: Double): Double = {
+    scala.math.pow(base, exponent)
+  }
+  def sqroot(number: Double): Double = {
+    scala.math.sqrt(number)
+  }
+  def logn(number: Double): Double = {
+    scala.math.log(number)
+  }
 }

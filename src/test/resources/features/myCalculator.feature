@@ -47,3 +47,39 @@ Feature: My Calculator
       | result |
       | 3      |
       | 4      |
+
+  @wip
+  Scenario: Should raise first number to the power of the second
+    Given my calculator is running
+    When I calculate the exponentiation of the following numbers
+      | firstNum | secondNum |
+      | 3        | 3         |
+      | 2        | 10        |
+    Then result should be equal to
+      | result |
+      | 27     |
+      | 1024   |
+
+  @wip
+  Scenario: Should get square root of a number
+    Given my calculator is running
+    When I calculate the square roots of the following numbers
+      | firstNum |
+      | 81       |
+      | 36       |
+    Then result should be equal to
+      | result |
+      | 9      |
+      | 6      |
+
+  @wip
+  Scenario: Should get log n of a number
+    Given my calculator is running
+    When I calculate the log n of the following numbers
+      | firstNum      |
+      | 2.71828182846 |
+      | 2980.95798704 |
+    Then result should be equal to
+      | result |
+      | 1      |
+      | 8      |
