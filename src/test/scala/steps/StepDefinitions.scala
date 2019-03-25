@@ -3,6 +3,7 @@ package steps
 import calc.MyCalculator
 import cucumber.api.DataTable
 import cucumber.api.scala.{EN, ScalaDsl}
+import scala.math._
 
 import scala.collection.JavaConversions._
 import scala.collection.JavaConverters._
@@ -38,6 +39,75 @@ class StepDefinitions extends ScalaDsl with EN {
       i < list.size
     }) {
       result.append(calc.sub(list.get(i).get("firstNum").toInt, list.get(i).get("secondNum").toInt))
+
+      {
+        i += 1; i - 1
+      }
+    }
+  }
+
+  When("""^I multiply the following numbers$"""){ (numbers:DataTable) =>
+    val list = numbers.asMaps(classOf[String], classOf[String])
+    var i = 0
+    while ( {
+      i < list.size
+    }) {
+      result.append(calc.mul(list.get(i).get("firstNum").toInt, list.get(i).get("secondNum").toInt))
+
+      {
+        i += 1; i - 1
+      }
+    }
+  }
+
+  When("""^I divide the following numbers$"""){ (numbers:DataTable) =>
+    val list = numbers.asMaps(classOf[String], classOf[String])
+    var i = 0
+    while ( {
+      i < list.size
+    }) {
+      result.append(calc.div(list.get(i).get("firstNum").toInt, list.get(i).get("secondNum").toInt))
+
+      {
+        i += 1; i - 1
+      }
+    }
+  }
+  When("""^I power the following numbers$"""){ (numbers:DataTable) =>
+    val list = numbers.asMaps(classOf[String], classOf[String])
+    var i = 0
+    while ( {
+      i < list.size
+    }) {
+
+      result.append(calc.pow(list.get(i).get("firstNum").toInt, list.get(i).get("secondNum").toInt).toInt)
+
+      {
+        i += 1; i - 1
+      }
+    }
+  }
+  When("""^I square root a number$"""){ (numbers:DataTable) =>
+    val list = numbers.asMaps(classOf[String], classOf[String])
+    var i = 0
+    while ( {
+      i < list.size
+    }) {
+      result.append(calc.sqrt(list.get(i).get("firstNum").toInt).toInt)
+
+      {
+        i += 1; i - 1
+      }
+    }
+  }
+
+  When("""^I log a number$"""){ (numbers:DataTable) =>
+    val list = numbers.asMaps(classOf[String], classOf[String])
+    var i = 0
+    while ( {
+      i < list.size
+    }) {
+      result.append(scala.math.round(calc.log(list.get(i).get("firstNum").toDouble)).toInt)
 
       {
         i += 1; i - 1
